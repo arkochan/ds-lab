@@ -21,12 +21,12 @@ public:
     {
         long long x_size = x.length();
         long long y_size = y.length();
-        long long r_hash = hash(x.substr(0, y_size));
+        long long rolling_hash = hash(x.substr(0, y_size));
         long long y_hash = hash(y);
         long long primepow = pow(prime, y_size - 1);
         for (long long i = 0; i < x_size - y_size; i++)
         {
-            if (r_hash == y_hash)
+            if (rolling_hash == y_hash)
             {
                 if (x.substr(i, y_size) == y)
                 {
@@ -35,9 +35,9 @@ public:
                 }
             }
 
-            r_hash -= x[i];
-            r_hash /= prime;
-            r_hash += x[i + y_size] * primepow;
+            rolling_hash -= x[i];
+            rolling_hash /= prime;
+            rolling_hash += x[i + y_size] * primepow;
         }
         return -1;
     }
@@ -45,7 +45,7 @@ public:
 long long rabin::prime = 3;
 int main()
 {
-    string str1 = "killuachan 22 1 arko hahahah";
+    string str1 = "i am arkochan";
     string str2 = "arko";
     cout << rabin::r_find(str1, str2) << endl;
 }

@@ -1,0 +1,1 @@
+cout << ite->wcount() << "  YES" << endl
