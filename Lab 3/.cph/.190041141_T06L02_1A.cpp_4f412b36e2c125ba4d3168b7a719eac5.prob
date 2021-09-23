@@ -1,1 +1,0 @@
-{"name":"Local: 190041141_T06L02_1A","url":"d:\\My Drive\\Academics\\4303\\Lab 2\\190041141_T06L02_1A.cpp","tests":[{"id":1621793272113,"input":"()))((","output":"4"},{"id":1621793295687,"input":"((())()","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\My Drive\\Academics\\4303\\Lab 2\\190041141_T06L02_1A.cpp","group":"local","local":true}

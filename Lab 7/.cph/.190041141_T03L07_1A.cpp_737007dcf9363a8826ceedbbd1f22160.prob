@@ -1,1 +1,0 @@
-{"name":"Local: 190041141_T03L07_1A","url":"h:\\My Drive\\Academics\\4303\\Lab 7\\190041141_T03L07_1A.cpp","tests":[{"id":1629848761160,"input":"5 2\n3 2 1 4 5\n1 2 3 5\n2 2 4","output":"17"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"h:\\My Drive\\Academics\\4303\\Lab 7\\190041141_T03L07_1A.cpp","group":"local","local":true}

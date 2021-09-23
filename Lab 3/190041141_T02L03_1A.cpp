@@ -12,7 +12,7 @@ public:
         size = n;
         arr = arrin;
     }
-    void heapify(ll n)
+    void heapify_down(ll n)
     {
         ll largest = n;
         ll leftChild = 2 * n + 1;
@@ -25,7 +25,7 @@ public:
         {
             cout << n << " " << largest << endl;
             swap(arr[n], arr[largest]);
-            heapify(largest);
+            heapify_down(largest);
         }
         return;
     }
@@ -35,15 +35,15 @@ public:
             return;
         swap(arr[0], arr[size]);
         size--;
-        heapify(0);
+        heapify_down(0);
         heap_sort();
         return;
     }
     void build_max_heap()
     {
         for (ll i = size / 2; i >= 0; i--)
-            heapify(i);
-        heapify(0);
+            heapify_down(i);
+        heapify_down(0);
     }
 };
 

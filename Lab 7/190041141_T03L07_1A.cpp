@@ -55,7 +55,6 @@ void update(int node, int b, int e, int i, int j, int x)
     update(Right, mid + 1, e, i, j, x);
     tree[node].sum = tree[Left].sum + tree[Right].sum + (e - b + 1) * tree[node].prop;
 }
-
 int main()
 {
     int n, test, i, j, choice, v;

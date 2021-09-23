@@ -29,24 +29,23 @@ public:
     }
     void rotate_right(node *z)
     {
-        node *left = z->lc;
-        node *lrc = left->rc;
-
-        left->parent = z->parent;
+        node *y = z->lc;
+        node *x = y->rc;
+        y->parent = z->parent;
         if (z == root)
-            root = left;
+            root = y;
         else
         {
             if (z->parent->lc == z)
-                z->parent->lc = left;
+                z->parent->lc = y;
             else
-                z->parent->rc = left;
+                z->parent->rc = y;
         }
-        left->rc = z;
-        z->parent = left;
-        if (lrc)
-            lrc->parent = z;
-        z->lc = lrc;
+        y->rc = z;
+        z->parent = y;
+        if (x)
+            x->parent = z;
+        z->lc = x;
         node *ite = z;
         while (ite)
         {
@@ -56,23 +55,23 @@ public:
     }
     void rotate_left(node *z)
     {
-        node *right = z->rc;
-        node *rlc = right->rc;
-        right->parent = z->parent;
+        node *y = z->rc;
+        node *x = y->lc;
+        y->parent = z->parent;
         if (z == root)
-            root = right;
+            root = y;
         else
         {
             if (z->parent->rc == z)
-                z->parent->rc = right;
+                z->parent->rc = y;
             else
-                z->parent->lc = right;
+                z->parent->lc = y;
         }
-        right->lc = z;
-        z->parent = right;
-        z->rc = rlc;
-        if (rlc)
-            rlc->parent = z;
+        y->lc = z;
+        z->parent = y;
+        z->rc = x;
+        if (x)
+            x->parent = z;
         node *ite = z;
         while (ite != NULL)
         {

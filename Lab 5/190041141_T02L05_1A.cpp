@@ -73,9 +73,9 @@ public:
         {
             node *ite = q.front();
             q.pop();
-            if (ite->lc != NULL)
+            if (ite->lc)
                 q.push(ite->lc);
-            if (ite->rc != NULL)
+            if (ite->rc)
                 q.push(ite->rc);
             cout << ite->data << " ";
         }

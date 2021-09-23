@@ -45,7 +45,7 @@ public:
 long long rabin::prime = 3;
 int main()
 {
-    string str1 = "killuachan 22 1 arko hahahah";
+    string str1 = "hello iam arko sdklajfkl;asdj";
     string str2 = "arko";
     cout << rabin::r_find(str1, str2) << endl;
 }

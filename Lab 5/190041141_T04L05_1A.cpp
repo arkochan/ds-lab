@@ -78,9 +78,9 @@ public:
                 st.push(ite);
                 ite = ite->lc;
             }
+            cout << ite->data << " ";
             ite = st.top();
             st.pop();
-            cout << ite->data << " ";
             ite = ite->rc;
         }
     }
@@ -92,11 +92,11 @@ public:
         {
             node *ite = q.front();
             q.pop();
+            cout << ite->data << " ";
             if (ite->lc)
                 q.push(ite->lc);
             if (ite->rc)
                 q.push(ite->rc);
-            cout << ite->data << " ";
         }
         cout << endl;
     }
